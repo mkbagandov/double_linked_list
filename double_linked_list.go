@@ -1,9 +1,5 @@
 package double_linked_list
 
-import (
-	"fmt"
-)
-
 type node struct {
 	val  map[string]string
 	next *node
@@ -54,7 +50,6 @@ func (l *DoubleLinkedList) PrintReverse() *[]map[string]string {
 	if l.tail != nil {
 		result := make([]map[string]string, 1)
 		for {
-			fmt.Println(l.tail.val)
 			result = append(result, l.tail.val)
 			if l.tail.prev == nil {
 				break
